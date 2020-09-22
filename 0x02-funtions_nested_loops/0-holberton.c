@@ -1,4 +1,5 @@
-#include <stdio.h>
+#include "holberton.h"
+#include <stdlib.h>
 /**
  * main principal
  *
@@ -7,6 +8,14 @@
  */
 int main(void)
 {
-	printf("Holberton\n");
+	char name[] = "Holberton\n";
+	int x = 0;
+
+	while (x < 9)
+	{
+		_putchar(name[x]);
+		x++;
+	}
+	_putchar('\n');
 	return (0);
 }
