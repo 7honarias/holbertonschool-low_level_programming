@@ -1,10 +1,8 @@
 #include "holberton.h"
 #include <stdlib.h>
 /**
- * main principal
- *
- * return 0 success
- *
+ * main - Print a string using the provided function _putchar
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
