@@ -1,12 +1,13 @@
 #include "holberton.h"
+
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * print_alphabet - Print the alphabet.
+ * Return: Nothing
  */
 void print_alphabet(void)
 {
 	char x = 'a';
+
 	while (x < 'z')
 	{
 		_putchar(x);
