@@ -1,8 +1,10 @@
 #include "holberton.h"
 /**
- * print_sign: prints the sign of a number
- * Return: 1 and prints + if n is greater than zero
- * @n: int of main
+ * print_sign - Print the sign of a number.
+ * @n: is the digit to check.
+ * Description: Print on standart output the sign of a number and return the
+ * same.
+ * Return: 1 if is greater than zero, 0 is is 0, -1 if is less than zero
  */
 int print_sign(int n)
 {
