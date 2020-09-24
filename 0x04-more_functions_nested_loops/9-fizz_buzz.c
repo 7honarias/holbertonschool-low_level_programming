@@ -15,19 +15,24 @@ int main(void)
 	{
 		if ((numb % 3 == 0) && (numb % 5 == 0))
 		{
-			printf("FizzBuzz ");
+			printf("FizzBuzz");
 		}
 		else if (numb % 3 == 0)
 		{
-			printf("Fizz ");
+			printf("Fizz");
 		}
 		else if (numb % 5 == 0)
 		{
-			printf("Buzz ");
+			printf("Buzz");
 		}
 		else
 		{
-			printf("%d ", numb);
+			printf("%d", numb);
+		}
+
+		if (numb != 100)
+		{
+			putchar(' ')
 		}
 	}
 	putchar('\n');
