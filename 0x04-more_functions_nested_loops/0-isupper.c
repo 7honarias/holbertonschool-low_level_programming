@@ -1,15 +1,15 @@
 #include "holberton.h"
 
 /**
- * _isupper - funtion checks for uppercase character.
- * @c: intro of character
- * Return: 1 if charter is uppercase
- *
+ * _isdigit - Check if a character is a digit.
+ * @c: integer to evaluate
+ * Return: 1 if c is a uppcase, 0 otherwise.
  */
+
 
 int _isupper(int c)
 {
-	if (c > 40 && c <= 'Z')
+	if (c > 'A' && c <= 'Z')
 	{
 		return (1);
 	}
