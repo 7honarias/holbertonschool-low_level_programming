@@ -1,40 +1,33 @@
-#include "holberton.h"
 #include <stdio.h>
 
 /**
- * main - funtion print the numbers from 1 to 100, followed by a new line
+ * main - Fizz-Buzz test
+ * Description: Prints the numbers from 1 to 100, followed by a new line. But
+ * for multiples of three print Fizz instead of the number and for the
+ * multiples of five print Buzz. For numbers which are multiples of both three
+ * and five.
+ * print FizzBuzz.
  *
- * Return: Always 0 sucess
+ * Return: Always 0.
  */
-
 int main(void)
 {
-	int numb;
+	int num;
 
-	for (numb = 1; numb <= 100; numb++)
+	for (num = 1; num <= 100; num++)
 	{
-		if ((numb % 3 == 0) && (numb % 5 == 0))
+		if (num % 3 != 0 && num % 5 != 0)
 		{
-			printf("FizzBuzz");
-		}
-		else if (numb % 3 == 0)
-		{
-			printf("Fizz");
-		}
-		else if (numb % 5 == 0)
-		{
-			printf("Buzz");
+			printf("%i", num);
 		}
 		else
 		{
-			printf("%d", numb);
+			if (num % 3 == 0)
+				printf("Fizz");
+			if (num % 5 == 0)
+				printf("Buzz");
 		}
-
-		if (numb != 100)
-		{
-			putchar(' ')
-		}
+		(num == 100) ? putchar('\n') : putchar(' ');
 	}
-	putchar('\n');
 	return (0);
 }
