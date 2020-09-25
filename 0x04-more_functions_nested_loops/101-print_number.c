@@ -1,26 +1,26 @@
 #include "holberton.h"
+
 /**
- * print_number - print a number
- * @n: number to print
- * Return: Nothing.
+ * print_number - Prints an integer.
+ * @n: the integer.
  */
+
 void print_number(int n)
 {
-	if (n < 0)
-		_putchar('-');
-	if (n > 999 || n < -999)
-	{
-		_putchar((n / 1000) % 10 + 48);
-	}
-	if (n > 99 || n < -99)
-	{
-		_putchar((n / 100) % 10 + 48);
-
-	}
 	if (n > 9 || n < -9)
 	{
-		_putchar((n / 10) % 10 + 48);
-
+		print_number(n / 10);
+		if (n < 0)
+			n = (n % 10) * -1;
+		_putchar ((n % 10) + '0');
 	}
-	_putchar(n % 10 + 48);
+	else
+	{
+		if (n < 0)
+		{
+			_putchar('-');
+			n *= -1;
+		}
+		_putchar(n + '0');
+	}
 }
