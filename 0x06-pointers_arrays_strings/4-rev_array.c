@@ -7,20 +7,20 @@
  * Return: Nothing.
  */
 
-void print_array(int *a, int n)
+void reverse_array(int *a, int n)
 {
 	int i;
+	int temp;
 
 	i = 0;
 	n--;
-	while (n >= i)
+	while (n != i)
 	{
-		printf("%d", a[n]);
-		if (a[n] != a[i])
-		{
-			printf(", ");
-		}
+		temp = a[n];
+		a[n] = a[i];
+		a[i] = temp;
+		i++;
 		n--;
 	}
-	printf("\n");
+	
 }
