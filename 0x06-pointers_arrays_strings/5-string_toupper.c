@@ -2,7 +2,7 @@
 
 /**
  * string_toupper - changes all lowercase letters
- * @s:
+ * @s: is array for review
  * Return: char.
  */
 
@@ -21,5 +21,5 @@ char *string_toupper(char *s)
 		i++;
 		s++;
 	}
-	return(s);
+	return (s);
 }
