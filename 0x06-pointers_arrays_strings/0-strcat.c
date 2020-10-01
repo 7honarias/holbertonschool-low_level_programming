@@ -1,8 +1,8 @@
 # include "holberton.h"
 /**
  * _strcat - function that concatenate two strings
- * dest: string one
- * src: string two
+ * @dest: string one
+ * @src: string two
  * Return: string.
  */
 
