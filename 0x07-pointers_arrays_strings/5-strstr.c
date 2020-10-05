@@ -1,6 +1,6 @@
 # include "holberton.h"
 /**
- * strstr - definition
+ * _strstr - definition
  * @haystack: firt string
  * @needle: second string
  * Return: null if not found or pointer
