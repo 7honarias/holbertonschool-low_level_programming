@@ -20,11 +20,11 @@ char *_strchr(char *s, char c)
 			ret = &s[i];
 			break;
 		}
+		else
+		{
+			ret = '\0';
+		}
 		++i;
-	}
-	if (s[i] == '\0')
-	{
-		ret = &s[i];
 	}
 	return (ret);
 }
