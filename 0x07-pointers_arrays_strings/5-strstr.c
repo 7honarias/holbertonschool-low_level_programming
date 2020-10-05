@@ -23,11 +23,11 @@ char *_strstr(char *haystack, char *needle)
 		if (j > 0)
 		{
 			i -= j;
-			if (needle[j] == '\0')
+			if (!needle[j])
 			{
 				return (haystack + i);
 			}
 		}
 	}
-	return ('\0');
+	return ("NA");
 }
