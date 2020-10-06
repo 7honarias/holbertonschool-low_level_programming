@@ -5,7 +5,7 @@
  * Return: Always 0 success
  */
 
-void main(void)
+int main()
 {
 	int sum, x;
 
@@ -19,6 +19,7 @@ void main(void)
 		}
 		x++;
 	}
+	printf("%d \n", sum);
 	return (0);
 
 
