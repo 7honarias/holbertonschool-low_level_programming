@@ -1,43 +1,45 @@
-# include "holberton.h"
-/**
- * _strstr - definition
- * @haystack: firt string
- * @needle: second string
- * Return: null if not found or pointer
- */
+#include "holberton.h"
 
+/**
+ * _strstr - locates a substring in @haystack
+ * Description: finds the first occurrence of the substring needle in the
+ * string haystack. The terminating null bytes (\0) are not compared
+ * @haystack: is the array
+ * @needle: is the substring to find
+ * Return: Returns a pointer to the byte in s that matches with the substring
+ * or NULL if no such byte is found
+ */
 char *_strstr(char *haystack, char *needle)
 {
-	int i = 0;
-	int j = 0;
-	char *res = '\0';
+	int i, a, b, lsub, compa = -1;
+	char *ret;
 
-	for (i = 0; haystack[i] != '\0'; i++)
+	for (lsub = 0; needle[lsub]; lsub++)
+	{}
+
+	lsub--;
+	for (i = 0; haystack[i]; i++)
 	{
-		j = 0;
-		while (needle[j] != '\0' && haystack[i] == needle[j])
+		if (haystack[i] == needle[0])
 		{
-			j++;
-			i++;
-		}
+			b = i;
+			for (a = 0; a <= lsub; a++)
+			{
+				if (haystack[b] == needle[a])
+					compa = a;
 
-		if (j > 0)
+				b++;
+			}
+		}
+		if (compa == lsub)
 		{
-			i -= j;
-			if (needle[j] == '\0')
-			{
-				res = &haystack[i];
-				break;
-			}
-			else
-			{
-				res = '\0';
-			}
+			ret = &haystack[i];
+			break;
 		}
 		else
 		{
-			res = '\0';
+			ret = '\0';
 		}
 	}
-	return (res);
+	return (ret);
 }
