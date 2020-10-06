@@ -19,7 +19,7 @@ int main(void)
 		y = x;
 		x = sum;
 		count++;
-		if(count != 50)
+		if (count != 50)
 		{
 			printf(", ");
 		}
