@@ -12,7 +12,7 @@ int is_palindrome(char *s)
 }
 
 /**
- * _sterlen - count charter of string
+ * _strlen - count charter of string
  * @s: string to validator
  * Return: size of the string
  */
