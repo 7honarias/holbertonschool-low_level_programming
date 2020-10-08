@@ -29,11 +29,11 @@ int is_prime_number(int n)
 
 int prim(int n, int i)
 {
-	if(n % i == 0)
+	if (n % i == 0)
 	{
 		return (0);
 	}
-	if(i * i > n)
+	if (i * i > n)
 	{
 		return (1);
 	}
