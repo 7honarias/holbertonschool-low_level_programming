@@ -17,11 +17,11 @@ int is_palindrome(char *s)
  * Return: size of the string
  */
 
-int _sterlen(char *s)
+int _strlen(char *s)
 {
 	if (*s == '\0')
 		return (0);
-	return (1 + _sterleng(s + 1));
+	return (1 + _strlen(s + 1));
 }
 
 /**
@@ -38,9 +38,9 @@ int validador(int j, int str, char *s)
 	{
 		if (s[j] == s[str])
 		{
-			return (validador(i + 1, str - 1, s));
+			return (validador(j + 1, str - 1, s));
 		}
-		else if (s[i] != s[str])
+		else if (s[j] != s[str])
 		{
 			return (0);
 		}
