@@ -1,44 +1,5 @@
 # include "holberton.h"
 # include <stdlib.h>
-
-/**
- * calcular - calculate coins
- * @i: int
- * Return: int with res
- */
-
-int calcular(int i)
-{
-	int j = i;
-	int res;
-	int k;
-
-	k = 0;
-	res = 0;
-
-	if (j >= 25)
-	{
-		res = j / 25;
-		j = j % 25;
-		k = k + res;
-	}
-
-	if (j >= 10)
-	{
-		res = j / 10;
-		j = j % 10;
-		k = k + res;
-	}
-	if (j >= 5)
-	{
-		res = j / 5;
-		j = j % 5;
-		k = k + res;
-	}
-	k = k + j;
-
-	return (k);
-}
 /**
  * main - print the minimum number of coins
  * @argc: argument count
@@ -48,10 +9,9 @@ int calcular(int i)
 
 int main(int argc, char *argv[])
 {
-	int i = atoi(argv[1]);
-	int rest;
+	int i = atoi(argv[1]), res = 0;
+	int k = 0, j = 0;
 
-	rest = 0;
 	if (argc != 2)
 	{
 		printf("Error\n");
@@ -60,9 +20,27 @@ int main(int argc, char *argv[])
 
 	if (i > 0)
 	{
-		rest = calcular(i);
+		if (i >= 25)
+		{
+			res = i / 25;
+			i = i % 25;
+			k = k + res;
+		}
 
+		if (i >= 10)
+		{
+			res = i / 10;
+			i = i % 10;
+			k = k + res;
+		}
+		if (j >= 5)
+		{
+			res = i / 5;
+			i = i % 5;
+			k = k + res;
+		}
+		k = k + i;
 	}
-	printf("%d\n", rest);
+	printf("%d\n", k);
 	return (0);
 }
