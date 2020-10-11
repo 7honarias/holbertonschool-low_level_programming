@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 	long i;
 	long mul = 1;
 
-	if (argc > 1)
+	if (argc == 2)
 	{
 		for (i = 1; i < argc; i++)
 		{
@@ -24,6 +24,7 @@ int main(int argc, char *argv[])
 	else
 	{
 		printf("Error\n");
+		return (1);
 	}
 	return (0);
 }
