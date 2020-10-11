@@ -9,8 +9,7 @@
 
 int main(int argc, char *argv[])
 {
-	int i = atoi(argv[1]), res = 0;
-	int k = 0, j = 0;
+	int j, k, res;
 
 	if (argc != 2)
 	{
@@ -18,29 +17,30 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	if (i > 0)
-	{
-		if (i >= 25)
-		{
-			res = i / 25;
-			i = i % 25;
-			k = k + res;
-		}
+        j = atoi(argv[1]);
+	res = 0;
+	k = 0;
 
-		if (i >= 10)
-		{
-			res = i / 10;
-			i = i % 10;
-			k = k + res;
-		}
-		if (j >= 5)
-		{
-			res = i / 5;
-			i = i % 5;
-			k = k + res;
-		}
-		k = k + i;
+	if (j >= 25)
+	{
+		res = j / 25;
+		j = j % 25;
+		k = k + res;
 	}
+
+	if (j >= 10)
+	{
+		res = j / 10;
+		j = j % 10;
+		k = k + res;
+	}
+	if (j >= 5)
+	{
+		res = j / 5;
+		j = j % 5;
+		k = k + res;
+	}
+	k = k + j;
 	printf("%d\n", k);
 	return (0);
 }
