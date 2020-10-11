@@ -50,28 +50,19 @@ int main(int argc, char *argv[])
 {
 	int i = atoi(argv[1]);
 	int rest;
-	int j = argc;
 
 	rest = 0;
-	if (j > 2 || j == 1)
+	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	else
+
+	if (i > 0)
 	{
-		if (i <= 0)
-		{
-			printf("%d\n", 0);
-			return (0);
-		}
-		else
-		{
+		rest = calcular(i);
 
-			rest = calcular(i);
-
-			printf("%d\n", rest);
-		}
 	}
+	printf("%d\n", rest);
 	return (0);
 }
