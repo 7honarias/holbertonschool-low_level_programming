@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 		j = j % 5;
 		k = k + res;
 	}
-	if (j > 2)
+	if (j >= 2)
 	{
 		res = j / 2;
 		j = j % 2;
