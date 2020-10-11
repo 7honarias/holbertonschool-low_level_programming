@@ -40,7 +40,8 @@ int main(int argc, char *argv[])
 		j = j % 5;
 		k = k + res;
 	}
-	k = k + j;
+	if (j > 0)
+		k = k + j;
 	printf("%d\n", k);
 	return (0);
 }
