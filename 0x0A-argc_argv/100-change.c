@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
 	int j = argc;
 
 	rest = 0;
-	if (j != 2)
+	if (j > 2 || j == 1)
 	{
 		printf("Error\n");
 		return (1);

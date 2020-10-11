@@ -12,6 +12,8 @@ int main(int argc, char *argv[])
 {
 	int sum;
 	int i;
+	int j;
+	char *punt;
 
 	sum = 0;
 	if (argc < 1)
@@ -22,16 +24,16 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (atoi(argv[i]) != 0)
+			punt = argv[i];
+			for (j = 0; punt[j]; j++)
 			{
-				sum = sum + atoi(argv[i]);
+				if (punt[j] < 48 || punt[j] > 57)
+				{
+					printf("Error\n");
+					return (1);
+				}
 			}
-			else
-			{
-				printf("Error\n");
-				return (1);
-			}
-
+			sum = sum + atoi(argv[i]);
 		}
 		printf("%d\n", sum);
 	}
