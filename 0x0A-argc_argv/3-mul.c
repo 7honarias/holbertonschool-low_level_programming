@@ -13,13 +13,17 @@ int main(int argc, char *argv[])
 	long i;
 	long mul = 1;
 
-	if (argc >= 1)
+	if (argc > 1)
 	{
 		for (i = 1; i < argc; i++)
 		{
 			mul = mul * atol(argv[i]);
 		}
 		printf("%ld\n", mul);
+	}
+	else
+	{
+		printf("Error\n");
 	}
 	return (0);
 }
