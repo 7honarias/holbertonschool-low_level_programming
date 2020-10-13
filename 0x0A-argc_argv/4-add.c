@@ -1,5 +1,6 @@
 # include "holberton.h"
 # include <stdlib.h>
+# include <ctype.h>
 
 /**
  * main - adds positive numbers
@@ -27,7 +28,7 @@ int main(int argc, char *argv[])
 			punt = argv[i];
 			for (j = 0; punt[j]; j++)
 			{
-				if (punt[j] < 48 || punt[j] > 57)
+				if (isdigit(punt[j]) == 0)
 				{
 					printf("Error\n");
 					return (1);
