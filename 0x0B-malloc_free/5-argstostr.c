@@ -14,7 +14,7 @@ char *argstostr(int ac, char **av)
 	char *p;
 	int j, i = 0, count = 0;
 
-	if (ac == 0 || av == NULL)
+	if (ac < 1 || av == NULL)
 	{
 		return (NULL);
 	}
@@ -30,7 +30,7 @@ char *argstostr(int ac, char **av)
 		i++;
 	}
 
-	p = malloc(sizeof(char) * (count));
+	p = malloc(sizeof(char) * (count + 1));
 	if (p == NULL)
 	{
 		return (NULL);
