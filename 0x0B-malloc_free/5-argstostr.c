@@ -4,7 +4,7 @@
 /**
  * argstostr - concatenates all the argument
  * @ac:number of string
- * av: pointer
+ * @av: pointer
  * Return: pointer to string
  *
  */
@@ -12,8 +12,7 @@
 char *argstostr(int ac, char **av)
 {
 	char *p;
-	int i = 0;
-	int j, count = 0;
+	int j, i = 0, count = 0;
 
 	if (ac == 0 || av == NULL)
 	{
@@ -31,7 +30,7 @@ char *argstostr(int ac, char **av)
 		i++;
 	}
 
-	p = malloc(sizeof(char) * count);
+	p = malloc(sizeof(char) * (count));
 	if (p == NULL)
 	{
 		return (NULL);
