@@ -6,7 +6,7 @@
  * array_range - creates an array of int
  * @min: minimo
  * @max: maximo
- * return: pointer int
+ * Return: pointer int
  */
 
 int *array_range(int min, int max)
@@ -24,7 +24,7 @@ int *array_range(int min, int max)
 	if (p == NULL)
 		return (NULL);
 
-	for (i = min; i <= max; i++)
+	for (i = 0; i + min <= max; i++)
 		p[i] = i + min;
 
 	return (p);
