@@ -1,5 +1,4 @@
-# include "calc.h"
-# include <stdio.h>
+#include "3-calc.h"
 
 /**
  * op_add - function for +
@@ -8,7 +7,7 @@
  * Return: int
  */
 
-int opt_add(int a, int b)
+int op_add(int a, int b)
 {
 	return (a + b);
 }
@@ -20,7 +19,7 @@ int opt_add(int a, int b)
  * Return: int
  */
 
-int opt_sub(int a, int b)
+int op_sub(int a, int b)
 {
 	return (a - b);
 }
@@ -33,7 +32,7 @@ int opt_sub(int a, int b)
  * Return: int
  */
 
-int opt_sub(int a, int b)
+int op_mul(int a, int b)
 {
 	return (a * b);
 }
@@ -46,20 +45,20 @@ int opt_sub(int a, int b)
  * Return: int
  */
 
-int opt_sub(int a, int b)
+int op_div(int a, int b)
 {
 	return (a / b);
 }
 
 
 /**
- * op_sub - function for %
+ * op_mod - function for %
  * @a: firts number
  * @b: second number
  * Return: int
  */
 
-int opt_sub(int a, int b)
+int op_mod(int a, int b)
 {
 	return (a % b);
 }

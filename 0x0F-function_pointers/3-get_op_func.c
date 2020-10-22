@@ -1,14 +1,15 @@
-# include "3-calc.h"
+#include "3-calc.h"
 
 /**
- * get_op_func - function that selects the correct function
- * @s: is operator recive
- * Return: int operator
+ * get_op_func - function to select operator
  *
+ * @s: is the operator passed as argument to the program.
+ * Return: always successful
  */
 
 int (*get_op_func(char *s))(int, int)
 {
+
 	op_t ops[] = {
 		{"+", op_add},
 		{"-", op_sub},
@@ -20,8 +21,10 @@ int (*get_op_func(char *s))(int, int)
 	int i;
 
 	i = 0;
-	while (ops[i].op != NULL && strcmp(ops[i].op, s) != 0)
+	while (i < 5)
 	{
+		if(*s == *(ops[i].op))
+			break;
 		i++;
 	}
 	return (ops[i].f);
