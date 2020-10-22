@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
 
-	if (operator == NULL)
+	if (operator == NULL || argv[2][1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
