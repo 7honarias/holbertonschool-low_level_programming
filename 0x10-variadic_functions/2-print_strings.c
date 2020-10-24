@@ -3,7 +3,7 @@
 /**
  * print_strings - that prints strings
  * @separator: for separator ,
- * @@n number of strings
+ * @n: number of strings
  * Return: Nothing
  */
 
