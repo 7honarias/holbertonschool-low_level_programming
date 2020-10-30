@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 
-/*
+/**
  * print_list - print all item of list
  * @h:list
  * Return: number of element
@@ -18,7 +18,7 @@ int print_list(const list_t *h)
 
 	while (nAUX != NULL)
 	{
-		if(nAUX->str == NULL)
+		if (nAUX->str == NULL)
 		{
 			printf("[0] (nil)\n");
 		}
@@ -28,7 +28,7 @@ int print_list(const list_t *h)
 		}
 		i++;
 		nAUX = nAUX->next;
-        }
+	}
 	return (i);
 
 }
