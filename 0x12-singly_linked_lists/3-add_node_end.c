@@ -55,20 +55,24 @@ list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *new = NULL, *temp = *head;
 
-	if (head == '\0')
+	if (!head)
 		return (NULL);
 	new = createNode(str);
 	if (temp == NULL)
 	{
 		*head = new;
 	}
-	else
+	else if (new != NULL)
 	{
 		while (temp->next != NULL)
 		{
 			temp = temp->next;
 		}
 		temp->next = new;
+	}
+	else
+	{
+		return (NULL);
 	}
 	return (new);
 }
