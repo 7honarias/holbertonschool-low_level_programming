@@ -1,9 +1,9 @@
 #include "lists.h"
 
 /**
- *
- *
- *
+ * pop_listint - delete a nodo
+ * @head: list
+ * Return: number delete
  */
 int pop_listint(listint_t **head)
 {
