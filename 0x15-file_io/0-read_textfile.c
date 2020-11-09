@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include "holberton.h"
 /**
- * read_tetfile - reads a text file and prints i
+ * read_textfile - reads a text file and prints i
  * @filename: file name to read
  * @letters: int letters
  * Return: number of letters or 0 if file name es NULL
