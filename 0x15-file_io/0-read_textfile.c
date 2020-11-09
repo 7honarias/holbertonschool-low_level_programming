@@ -1,42 +1,38 @@
-#include <stdlib.h>
 #include "holberton.h"
+
 /**
- * read_textfile - reads a text file and prints i
- * @filename: file name to read
- * @letters: int letters
- * Return: number of letters or 0 if file name es NULL
- *
+ * read_textfile - read and write a file.
+ * @filename: const char type pointer to be read.
+ * @letters: size_t.
+ * Return: Always successful.
  */
 
-long int read_textfile(const char *filename, int letters)
+ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
-	long int fdwrite, fdread, fdclose;
-	char *memory;
+	ssize_t fdread, fdwrite, fdclose;
+	char *space;
 
 	if (filename == NULL)
-	{
 		return (0);
-	}
-	memory = malloc(sizeof(char) * letters);
-	if (memory == NULL)
+	space = malloc(sizeof(char) * letters);
+	if (space == NULL)
+	{
 		return (-1);
+	}
 
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
-		return (-1);
-
-	fdread = read(fd, memory, letters);
+		return (0);
+	fdread = read(fd, space, letters);
 	if (fdread == -1)
 		return (-1);
+	fdwrite = write(STDOUT_FILENO, space, fdread);
 
-	fdwrite = write(STDOUT_FILENO, memory, fdread);
 	if (fdwrite == -1)
 		return (-1);
-
 	fdclose = close(fd);
 	if (fdclose == -1)
 		return (-1);
-
 	return (fdread);
 }
