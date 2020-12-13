@@ -5,7 +5,7 @@
 /**
  * print_dlistint - print all list
  * @h: is the list
- *
+ * Return: int of number items in the list
  */
 size_t print_dlistint(const dlistint_t *h)
 {
