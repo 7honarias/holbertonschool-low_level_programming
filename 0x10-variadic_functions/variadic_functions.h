@@ -10,11 +10,17 @@ void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 
+/**
+ * struct op - struct for sum
+ * @str: string
+ * @option: options to do
+ */
+
 typedef struct op
 {
 	char *str;
 	void (*option)();
-}op_t;
+} op_t;
 
 void print_int(va_list arg);
 void print_char(va_list arg);
