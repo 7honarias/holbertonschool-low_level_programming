@@ -6,13 +6,10 @@ RM= rm -f
 CFLAGS= -Wall -Werror -Wextra -pedantic
 
 all: $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
-
-%.o:%.c
-	$(CC) $(CFLAGS) -c -o $@ $<
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 clean:
-	$(RM) *~ holberton
+	$(RM) *~ $(NAME)
 
 oclean:
 	$(RM) $(OBJ)
