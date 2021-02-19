@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""islan perimeter"""
+"""island perimeter"""
 
 
 def island_perimeter(grid):
@@ -14,7 +14,7 @@ def island_perimeter(grid):
     for m_list in grid:
         for i in range(len(m_list)-1):
             if m_list[i] == 1 and m_list[i+1] == 1:
-                perimeter -=2
+                perimeter -= 2
 
     for x in range(len(grid)-1):
         for y in range(len(grid[0])):
