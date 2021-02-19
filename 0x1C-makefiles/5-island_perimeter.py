@@ -13,13 +13,9 @@ def island_perimeter(grid):
             new_a = 0
             if grid[x][y] == 1:
                 new_a = 4
-                if grid[x][y-1] == 1:
-                    new_a -= 1
                 if grid[x][y+1] == 1:
-                    new_a -= 1
-                if grid[x-1][y] == 1:
-                    new_a -= 1
+                    new_a -= 2
                 if grid[x+1][y] == 1:
-                    new_a -= 1
+                    new_a -= 2
             perimeter += new_a
     return perimeter
