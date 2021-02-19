@@ -7,15 +7,15 @@ def island_perimeter(grid):
     grid is a list of list of integers"""
 
     perimeter = 0
+    for m_list in grid:
+        perimeter += m_list.count(1) * 4
 
+    
     for x in range(len(grid)-1):
         for y in range(len(grid[x])-1):
-            new_a = 0
-            if grid[x][y] == 1:
-                new_a = 4
-                if grid[x][y+1] == 1:
-                    new_a -= 2
-                if grid[x+1][y] == 1:
-                    new_a -= 2
-            perimeter += new_a
+            if grid[x][y] == 1 and grid[x][y+1] == 1:
+                perimeter -= 2
+            if grid[x][y] == 1 and grid[x+1][y] == 1:
+                perimeter -= 2
+
     return perimeter
